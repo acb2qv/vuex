@@ -39,7 +39,6 @@ export default new Vuex.Store({
     },
     mutations: {
         setProducts(state, products) {
-            // update products
             state.products  = products
         },
         pushProductToCart(state, productId){
@@ -51,8 +50,8 @@ export default new Vuex.Store({
         incrementItemQuantity(state, cartItem){
             cartItem.quantity++
         },
-        decrementProductInventory(state, cartItem){
-            cartItem.quantity--
+        decrementProductInventory(state, product){
+            product.inventory--
         }
     }
 })
